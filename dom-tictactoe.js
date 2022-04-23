@@ -19,11 +19,12 @@ let board = [
 const handleClick = (element) => {
   // check to see if the square clicked has anything in it, if not continue
   // this prevents an X being changed to an O
-  document.getElementById("playerTurn").innerHTML = "The current player is " + currentMarker
+  
   if(!document.getElementById(element.id).innerHTML){
     addMarker(element.id)
     updateBoard(element.id)
     checkForWin()
+    document.getElementById("playerTurn").innerHTML = "The current player is " + currentMarker
   }
 }
 
